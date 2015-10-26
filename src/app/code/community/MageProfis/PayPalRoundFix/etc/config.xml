@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MageProfis_PayPalRoundFix>
+            <version>0.0.0.1</version>
+        </MageProfis_PayPalRoundFix>
+    </modules>
+
+    <global>
+        <models>
+            <mppaypalroundfix>
+                <class>MageProfis_PayPalRoundFix_Model</class>
+            </mppaypalroundfix>
+            <paypal>
+                <cart>
+                    <rewrite>MageProfis_PayPalRoundFix_Model_Paypal_Cart</rewrite>
+                </cart>
+            </paypal>
+        </models>
+        <events>
+            <paypal_prepare_line_items>
+                <observers>
+                    <mppaypalroundfix>
+                        <class>mppaypalroundfix/observer</class>
+                        <method>onPaypalPreparelineItems</method>
+                    </mppaypalroundfix>
+                </observers>
+            </paypal_prepare_line_items>
+        </events>
+    </global>
+</config>
