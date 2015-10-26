@@ -12,9 +12,9 @@
                 <class>MageProfis_PayPalRoundFix_Model</class>
             </mppaypalroundfix>
             <paypal>
-                <cart>
-                    <rewrite>MageProfis_PayPalRoundFix_Model_Paypal_Cart</rewrite>
-                </cart>
+                <rewrite>
+                    <cart>MageProfis_PayPalRoundFix_Model_Paypal_Cart</cart>
+                </rewrite>
             </paypal>
         </models>
         <events>
